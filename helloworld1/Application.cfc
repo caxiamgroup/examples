@@ -12,6 +12,8 @@ component
 			"general.logout" = "",
 			"general.forgot-password" = ""
 		};
+
+		application.controller.initModule("facts");
 	}
 
 	function setupSession()
