@@ -62,7 +62,6 @@ component name="userService" extends="models.baseService"
 		{
 			throw(type = "LOGIN.BAD_PASSWORD");
 		}
-throw(message = "TESTING");
 
 		local.appUser = createAppUser();
 		local.appUser.setAuthenticated(true);

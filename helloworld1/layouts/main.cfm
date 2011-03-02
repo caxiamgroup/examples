@@ -9,7 +9,7 @@
 	<link href="/ax_lib/css/common.css" rel="stylesheet" type="text/css" media="all" />
 	<link href="/media/css/site.css" rel="stylesheet" type="text/css" media="all" />
 
-	<script src="/lib/js/jquery/jquery-1.5.1.js" type="text/javascript"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js" type="text/javascript"></script>
 	<script src="/ax_lib/js/validation.js" type="text/javascript"></script>
 	<script src="/media/js/site.js" type="text/javascript"></script>
 </head>
