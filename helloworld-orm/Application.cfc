@@ -4,7 +4,9 @@ component
 	this.datasource = "alyx_sandbox";
 	/* THIS FIXES HBMXML/cfc-to-cfc MAPPING ERRORS */
 	this.mappings["/localModels"] = expandPath("/models");
+	//setting up orm
 	this.ormEnabled = true;
+	//using the localModels mapping to tell it where all your models are
 	this.ormSettings.cfclocation = ["/localModels"];
 	this.ormSettings.autoManageSession = true;
 	this.ormSettings.dialect = "MySQLWithInnoDB";
