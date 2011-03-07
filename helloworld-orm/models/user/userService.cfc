@@ -1,8 +1,8 @@
-component name="userService" extends="localModels.baseService"
+component name="userService" extends="localModels.baseService" output="false"
 {
 	public function init()
 	{
-		variables.dao = new userDAO();
+		variables.dao = new userDAO("user", "user");
 		super.init(argumentCollection = arguments);
 		return this;
 	}
@@ -27,15 +27,19 @@ component name="userService" extends="localModels.baseService"
 		save(bean, forceInsert);
 	}
 
-	public function deleteUser()
+	public function deleteUser(required bean)
 	{
 		delete(argumentCollection = arguments);
 	}
 
-	public function createAppUser()
+	public function getUsersCount()
 	{
-		return CreateObject("component", "appuser").init(argumentCollection = arguments);
+		arguments.selectList = " COUNT(*) ";
+		arguments.offset = "";
+		arguments.maxResults = "";
+		return variables.dao.executeReadHQL(argumentCollection = arguments)[1];
 	}
+	
 
 	public void function loginUser(required username, required password)
 	{
